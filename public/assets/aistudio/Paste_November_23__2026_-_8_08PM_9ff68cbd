@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#a36700", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "surface-container": "#e5eeff", "on-tertiary-fixed": "#2a1700", "surface-container-high": "#dce9ff", "on-error": "#ffffff", "on-secondary-fixed": "#00210b", "on-tertiary-fixed-variant": "#653e00", "on-secondary": "#ffffff", "on-surface-variant": "#3e4a3d", "secondary-fixed": "#a6f4b5", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "surface-tint": "#006e2d", "outline-variant": "#bdcaba", "outline": "#6e7b6c", "surface-bright": "#f8f9ff", "secondary-fixed-dim": "#8bd79b", "surface-container-low": "#eff4ff", "secondary": "#1f6c3a", "primary": "#006b2c", "on-primary": "#ffffff", "inverse-surface": "#213145", "primary-container": "#00873a", "on-surface": "#0b1c30", "tertiary": "#825100", "primary-fixed": "#7ffc97", "inverse-on-surface": "#eaf1ff", "tertiary-fixed": "#ffddb8", "surface-container-highest": "#d3e4fe", "secondary-container": "#a4f1b2", "error": "#ba1a1a", "on-secondary-container": "#24703e", "on-background": "#0b1c30", "surface": "#f8f9ff", "on-primary-container": "#f7fff2", "surface-variant": "#d3e4fe", "on-secondary-fixed-variant": "#005226", "inverse-primary": "#62df7d", "on-tertiary-container": "#fffbff", "primary-fixed-dim": "#62df7d", "on-primary-fixed-variant": "#005320", "background": "#f8f9ff", "tertiary-fixed-dim": "#ffb95f", "surface-dim": "#cbdbf5", "on-primary-fixed": "#002109" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xxs": "0.25rem", "space-sm": "0.75rem", "space-xs": "0.5rem", "margin": "1rem", "space-xl": "2rem", "margin-lg": "2.5rem", "gutter": "1rem", "space-lg": "1.5rem", "space-2xl": "3rem", "margin-md": "1.5rem", "gutter-md": "1.5rem", "space-md": "1rem", "gutter-lg": "2rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg-mobile": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"], "display-hero-mobile": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "label-lg": ["Inter"], "headline-lg": ["Inter"], "title-md": ["Inter"], "display-hero": ["Inter"], "code-kpi": ["Inter"], "title-sm": ["Inter"], "headline-sm": ["Inter"] }, "fontSize": { "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "display-hero-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "display-hero": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "code-kpi": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f8f9ff;color:#0b1c30;font-family:Inter,sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}#nav-drawer.open{transform:translateX(0);pointer-events:auto;}#drawer-scrim.open{opacity:1;pointer-events:auto;}</style></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen relative"><header class="fixed top-0 w-full z-40 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><button aria-label="Open Navigation Menu" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" id="drawer-toggle"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-space-xs"><img alt="Smart Plate AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBJnbMC3TQC1qDEXNp5ZYa5tpUm-l0U-fKKojZ5A6AfumY-NzUNRBzQ98aARIfPTaa3KILMjbLA2Xz7IK10QqIJHVBqxruCzLzINQeT9dhclp6ETScCutT5xYIeUH1x7SSk2hTGE1Cfz4eKIGoOHvRRqFQets-rlvwOLlm5ce1Yd7DauxOKS8TOQbPezfEfV1CNlU2viTApQnKJG-kABRI0dc69BtzRPtnIA2I1BYE"/><span class="font-title-md text-title-md text-on-surface font-semibold tracking-tight hidden xs:inline">SmartPlate</span></div></div><div class="flex items-center gap-space-xs"><div class="inline-flex items-center gap-1.5 px-space-xs py-1 rounded-full bg-secondary-container/50 text-on-secondary-container font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="uppercase font-bold tracking-wider">NGO Hub</span></div><a class="w-11 h-11 flex items-center justify-center p-0.5 rounded-full hover:bg-surface-container-high transition-colors" data-path="profile-settings" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh8nRNpt24LZ0G-6i7r6mPAoEaz0CYyj19VzRVf86uNuGAvbQqeiQEvO3HvkPX-ibgArGR4FiTKjnh_9xxVValyDMuFOcIim6EnB2-8ONevhJDyN_aJx3YsLxJPp5AFQ4l69GIE3yrjI2Bw8UpMd1HTHevroiFbceEsMLc1p1c5L_BhUqM-ifvVlZ1nyaZALA0KmnGf-Azk8q2QoAYt_t3xSryx4SeiUSBhS4_wbo"/></a></div></div></header><div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-scrim"></div><aside class="fixed top-0 left-0 bottom-0 z-50 w-72 max-w-[85vw] bg-surface-container-lowest shadow-[0_4px_24px_rgba(0,0,0,0.08)] transform -translate-x-full pointer-events-none transition-transform duration-300 flex flex-col pt-safe pb-safe" id="nav-drawer"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="Smart Plate AI Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBJnbMC3TQC1qDEXNp5ZYa5tpUm-l0U-fKKojZ5A6AfumY-NzUNRBzQ98aARIfPTaa3KILMjbLA2Xz7IK10QqIJHVBqxruCzLzINQeT9dhclp6ETScCutT5xYIeUH1x7SSk2hTGE1Cfz4eKIGoOHvRRqFQets-rlvwOLlm5ce1Yd7DauxOKS8TOQbPezfEfV1CNlU2viTApQnKJG-kABRI0dc69BtzRPtnIA2I1BYE"/><span class="font-title-md text-title-md font-bold text-on-surface">Smart Plate AI</span></div><button aria-label="Close Drawer" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container" id="drawer-close"><span class="material-symbols-outlined text-[22px]">close</span></button></div><div class="px-space-md py-space-xs"><div class="p-space-xs bg-surface-container-low rounded-xl"><p class="text-label-sm font-label-sm uppercase tracking-wider text-outline mb-1.5 px-space-xxs">Active Role</p><div class="grid grid-cols-2 gap-1"><button class="py-1.5 px-2 rounded-lg bg-surface-container-lowest text-primary shadow-[0_1px_2px_rgba(0,0,0,0.06)] font-label-sm text-label-sm text-center font-bold">NGO</button><button class="py-1.5 px-2 rounded-lg text-on-surface-variant font-label-sm text-label-sm text-center hover:bg-surface-container">Donor</button><button class="py-1.5 px-2 rounded-lg text-on-surface-variant font-label-sm text-label-sm text-center hover:bg-surface-container">Volunteer</button><button class="py-1.5 px-2 rounded-lg text-on-surface-variant font-label-sm text-label-sm text-center hover:bg-surface-container">Admin</button></div></div></div><nav class="flex-1 overflow-y-auto px-space-md py-space-xs space-y-space-md" data-active-classes="bg-surface-container-high text-primary font-bold"><div class="space-y-1"><p class="text-label-sm font-label-sm uppercase tracking-wider text-outline px-space-xs">Operations</p><a class="flex items-center gap-space-sm h-11 px-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="live-food-rescue-feed" href="#"><span class="material-symbols-outlined text-[20px]">radar</span><span class="font-title-sm text-title-sm">Rescue Feed</span></a><a class="flex items-center gap-space-sm h-11 px-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ngo-inventory" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-title-sm text-title-sm">NGO Distribution</span></a><a class="flex items-center gap-space-sm h-11 px-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="donor-intake" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span class="font-title-sm text-title-sm">Donor Intake</span></a><a class="flex items-center gap-space-sm h-11 px-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="volunteer-routing" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-title-sm text-title-sm">Volunteer Missions</span></a></div><div class="space-y-1"><p class="text-label-sm font-label-sm uppercase tracking-wider text-outline px-space-xs">Administration &amp; Analytics</p><a class="flex items-center gap-space-sm h-11 px-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="admin-ecosystem-overview" href="#"><span class="material-symbols-outlined text-[20px]">shield_person</span><span class="font-title-sm text-title-sm">Admin Dashboard</span></a><a class="flex items-center gap-space-sm h-11 px-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="impact-metrics" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-title-sm text-title-sm">Impact Metrics</span></a></div><div class="space-y-1"><p class="text-label-sm font-label-sm uppercase tracking-wider text-outline px-space-xs">Public &amp; Access</p><a aria-current="page" class="flex items-center gap-space-sm h-11 px-space-xs rounded-xl transition-colors bg-surface-container-high text-primary font-bold" data-path="public-portal" href="#"><span class="material-symbols-outlined text-[20px]">public</span><span class="font-title-sm text-title-sm">Public Directory</span></a><a class="flex items-center gap-space-sm h-11 px-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="auth-portal" href="#"><span class="material-symbols-outlined text-[20px]">lock_reset</span><span class="font-title-sm text-title-sm">Auth Switcher</span></a></div></nav><div class="p-space-md border-t-0 bg-surface-container-low"><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-9 h-9 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh8nRNpt24LZ0G-6i7r6mPAoEaz0CYyj19VzRVf86uNuGAvbQqeiQEvO3HvkPX-ibgArGR4FiTKjnh_9xxVValyDMuFOcIim6EnB2-8ONevhJDyN_aJx3YsLxJPp5AFQ4l69GIE3yrjI2Bw8UpMd1HTHevroiFbceEsMLc1p1c5L_BhUqM-ifvVlZ1nyaZALA0KmnGf-Azk8q2QoAYt_t3xSryx4SeiUSBhS4_wbo"/><div class="flex flex-col min-w-0 flex-1"><span class="font-label-lg text-label-lg font-semibold truncate text-on-surface">Central Hope Pantry</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Verified NGO Dispatch</span></div></div></div></aside><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Subtle ambient glow banner -->
+<div class="relative px-gutter py-space-md overflow-hidden bg-gradient-to-b from-secondary-container/30 via-surface to-surface">
+<!-- Quick Live Status Pill -->
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-lowest shadow-sm mb-space-sm">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">14 Live Rescues Happening Now</span>
+</div>
+<!-- Main Mobile Hero Copy -->
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mb-space-xs">
+      Turn Surplus Into Sustenance with <span class="text-primary">Predictive AI</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+      AI-powered food demand forecasting &amp; real-time surplus redistribution platform connecting colleges, hotels, NGOs, and volunteers.
+    </p>
+<!-- Visual Anchor / Hero Illustration Card -->
+<div class="relative w-full rounded-xl overflow-hidden shadow-sm bg-surface-container-lowest mb-space-md">
+<img class="w-full h-44 object-cover" data-alt="Modern high-tech community food rescue operation with young professional volunteers and chefs packing healthy fresh surplus meals into organized eco-friendly thermal transport crates, bright natural morning sunlight streaming in, emerald green accents, vibrant clean photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcWqxuXOLLp_Viq4dkO2pMezQCExiXWaQ8yUFl52W5nXG8slV911EiL892EjWlliXyJG-1SFeXyproQVHOEpXfrRclcFO_8Wf3P9CN6jeqSut-WJDPN4_AHbmq2BkDyM28Zwy_nH04Uhdj3VNEbmH03kqeoV_GGs5liheCZPYnnj70cIcxahYDXQY1ux6i1Bv-2PG-C8bGJOl7kaOA7itWR4KT8zWeF9-Gtg0PO3c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/85 via-inverse-surface/30 to-transparent flex flex-col justify-end p-space-sm">
+<div class="flex items-center justify-between text-inverse-on-surface">
+<div class="flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed">auto_awesome</span>
+<span class="font-label-sm text-label-sm font-semibold">Bay Area Campus Pilot: 94% Waste Reduction</span>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm">Active Feed</span>
+</div>
+</div>
+</div>
+<!-- Quick Role CTAs (Primary Conversion Grid) -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-xs">
+<a class="flex items-center justify-between p-space-sm rounded-xl bg-primary text-on-primary shadow-sm active:scale-95 transition-transform" data-path="donor-intake" href="#">
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm font-bold truncate">Register Donor</span>
+<span class="font-label-sm text-label-sm text-on-primary/80">Hotels &amp; Dining</span>
+</div>
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-high text-on-surface shadow-sm active:scale-95 transition-transform" data-path="ngo-inventory" href="#">
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm font-bold truncate">Join as NGO</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pantries &amp; Hubs</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-primary">volunteer_activism</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-high text-on-surface shadow-sm active:scale-95 transition-transform" data-path="volunteer-routing" href="#">
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm font-bold truncate">Volunteer</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cold Dispatch</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-primary">directions_bike</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-lowest text-primary shadow-sm active:scale-95 transition-transform" data-path="live-food-rescue-feed" href="#">
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm font-bold truncate">Live Feed</span>
+<span class="font-label-sm text-label-sm text-secondary">Explore Radar</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-primary">radar</span>
+</a>
+</div>
+</div>
+<!-- Key Metrics 2x2 Bento Panel -->
+<section class="px-gutter py-space-xs">
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Ecosystem Live Pulse</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Verified impact ledger updated 4 mins ago</p>
+</div>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+        Audited
+      </span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Metric 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Food Saved</span>
+<span class="material-symbols-outlined text-[18px] text-primary">eco</span>
+</div>
+<p class="font-code-kpi text-code-kpi text-on-surface font-bold">2,450 <span class="font-label-md text-label-md font-semibold text-secondary">kg</span></p>
+<span class="inline-flex items-center gap-0.5 mt-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +310kg this week
+        </span>
+</div>
+<!-- Metric 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Registered NGOs</span>
+<span class="material-symbols-outlined text-[18px] text-primary">apartment</span>
+</div>
+<p class="font-code-kpi text-code-kpi text-on-surface font-bold">85</p>
+<span class="inline-flex items-center gap-0.5 mt-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 100% Verified
+        </span>
+</div>
+<!-- Metric 3 -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Completed Runs</span>
+<span class="material-symbols-outlined text-[18px] text-primary">task_alt</span>
+</div>
+<p class="font-code-kpi text-code-kpi text-on-surface font-bold">540</p>
+<span class="inline-flex items-center gap-0.5 mt-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">bolt</span> 24m avg transit
+        </span>
+</div>
+<!-- Metric 4 -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Active Donors</span>
+<span class="material-symbols-outlined text-[18px] text-primary">diversity_1</span>
+</div>
+<p class="font-code-kpi text-code-kpi text-on-surface font-bold">180</p>
+<span class="inline-flex items-center gap-0.5 mt-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.98 Quality
+        </span>
+</div>
+</div>
+</section>
+<!-- Interactive Surplus Reduction Impact Chart Card -->
+<section class="px-gutter py-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Impact Analytics</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Today's Surplus Diverted</h3>
+</div>
+<span class="px-space-xs py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold" id="chart-total-pill">
+          418 kg Total
+        </span>
+</div>
+<!-- Interactive Tab Filters for Chart -->
+<div class="flex items-center gap-1.5 p-1 rounded-lg bg-surface-container-low mb-space-sm">
+<button class="flex-1 py-1 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-sm transition-all text-center" id="tab-today">
+          Today
+        </button>
+<button class="flex-1 py-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold transition-all text-center hover:text-on-surface" id="tab-week">
+          This Week
+        </button>
+<button class="flex-1 py-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold transition-all text-center hover:text-on-surface" id="tab-category">
+          By Category
+        </button>
+</div>
+<!-- SVG Chart Display -->
+<div class="relative h-40 w-full flex flex-col justify-end pt-4">
+<!-- Grid horizontal lines -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20">
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+</div>
+<!-- Dynamic Bars -->
+<div class="relative z-10 grid grid-cols-6 gap-2 items-end h-32 px-1" id="chart-bars">
+<!-- Bar 1 (08:00) -->
+<div class="flex flex-col items-center gap-1 group">
+<span class="font-label-sm text-label-sm text-outline opacity-0 group-hover:opacity-100 transition-opacity">42k</span>
+<div class="w-full rounded-t-lg bg-secondary-container h-[35%] transition-all duration-500 hover:bg-primary"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">08:00</span>
+</div>
+<!-- Bar 2 (11:00) -->
+<div class="flex flex-col items-center gap-1 group">
+<span class="font-label-sm text-label-sm text-outline opacity-0 group-hover:opacity-100 transition-opacity">86k</span>
+<div class="w-full rounded-t-lg bg-secondary-container h-[60%] transition-all duration-500 hover:bg-primary"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">11:00</span>
+</div>
+<!-- Bar 3 (14:00 Peak Cafeteria) -->
+<div class="flex flex-col items-center gap-1 group">
+<span class="font-label-sm text-label-sm text-primary font-bold">145k</span>
+<div class="w-full rounded-t-lg bg-primary h-[95%] transition-all duration-500 shadow-sm"></div>
+<span class="font-label-sm text-label-sm font-bold text-primary">14:00</span>
+</div>
+<!-- Bar 4 (17:00) -->
+<div class="flex flex-col items-center gap-1 group">
+<span class="font-label-sm text-label-sm text-outline opacity-0 group-hover:opacity-100 transition-opacity">68k</span>
+<div class="w-full rounded-t-lg bg-secondary-container h-[48%] transition-all duration-500 hover:bg-primary"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">17:00</span>
+</div>
+<!-- Bar 5 (20:00 Banquet) -->
+<div class="flex flex-col items-center gap-1 group">
+<span class="font-label-sm text-label-sm text-outline opacity-0 group-hover:opacity-100 transition-opacity">77k</span>
+<div class="w-full rounded-t-lg bg-secondary-container h-[55%] transition-all duration-500 hover:bg-primary"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">20:00</span>
+</div>
+<!-- Bar 6 (Forecast) -->
+<div class="flex flex-col items-center gap-1 group">
+<span class="font-label-sm text-label-sm text-tertiary font-bold">~50k</span>
+<div class="w-full rounded-t-lg bg-tertiary-fixed h-[40%] transition-all duration-500 border-dashed"></div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">22:00</span>
+</div>
+</div>
+</div>
+<!-- Sparkline Footer Context -->
+<div class="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-low p-space-xs rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">cloud_done</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Estimated CO₂ Avoided Today:</span>
+</div>
+<span class="font-title-sm text-title-sm font-bold text-primary">1,045 kg CO₂e</span>
+</div>
+</div>
+</section>
+<!-- Platform Core Feature Cards -->
+<section class="px-gutter py-space-xs space-y-space-md mb-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Platform Capabilities</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Orchestrating every gram from surplus to table</p>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline">tune</span>
+</div>
+<!-- Feature Card 1: Predictive Demand AI -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">psychology</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm font-bold text-on-surface">Predictive Demand AI</h3>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Campus &amp; Hotel Meal Forecasting</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+          96.2% Acc.
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Trained on foot-traffic patterns, weather forecasts, and calendar events to anticipate excess cafeteria preparation 6 hours before service.
+      </p>
+<!-- Mini Graphic Feature Spec -->
+<div class="p-space-xs rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">query_stats</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Tonight's University Dining Projection</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary font-bold shadow-sm">-22% Waste Preempted</span>
+</div>
+<img class="w-full h-32 object-cover rounded-lg" data-alt="Modern interactive enterprise tablet dashboard displaying predictive food consumption curves, AI algorithmic meal estimations, clean infographics, and green supply chain metrics on a clean kitchen counter background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbYWn4G9JUlvS4evmnwdzitmpvVdPnJn_VxZYJP2iqjpPouJfzOTw4WxguMzgS7S7GAAFZcWjI4rpc4IIxMZzp3lY7LOg7KgrZbrgGaeDWwWtT2z9PxRspVOdrzRkk_Gf8SP2KyMYvf_bHhJnoskILCJgKtVbASScE--AFkEhytc5rPqQA-dm0VoRTEldsLDiRFHXK_hZfPOUvC0P-ulAumip6w4cWqmYr9GQCt48"/>
+</div>
+<!-- Feature Card 2: Instant NGO Matching -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">radar</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm font-bold text-on-surface">Instant NGO Matching</h3>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Hyper-local Proximity Radar (&lt;5km)</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">
+          &lt;180s Lock
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Algorithm matches prepared trays directly to verified community shelters based on dietary constraints, real-time bed capacity, and transit radius.
+      </p>
+<!-- Proximity Visual Simulated Badge Row -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm font-semibold truncate text-on-surface">St. Jude Community Kitchen</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">1.4 km • 40 meals</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm font-semibold truncate text-on-surface">Harbor Family Shelter</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">2.8 km • 85 meals</span>
+</div>
+</div>
+<div class="w-full h-32 bg-cover bg-center rounded-lg relative overflow-hidden" data-location="San Francisco Financial District, CA" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2syNiZZ2_Szf9TxoK0dw1ZqoYhw1cTcOHxT2gcTAG7bNqHf83TAVKj9_Ev8uavxbTfaCXEqHMdOFoGtip3UISNcSZhTyDs7B3HHswhw_UOBBtOi7PMwFQtvV3LYffAczdXdqaYE_f5BTAPO0O8u7uH7r8ivlQTPTSEY3Ueis0d0FSMNjZTSDzq_lhWqk0gh_L2V6SQNlki14Ty8EEcJmFrHLmV6OFy3H1I7tIojA')">
+<div class="absolute bottom-2 left-2 px-space-xs py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">near_me</span>
+          9 Active Pickups in Perimeter
+        </div>
+</div>
+</div>
+<!-- Feature Card 3: Cold-chain Volunteer Logistics -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">ac_unit</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm font-bold text-on-surface">Cold-Chain Logistics</h3>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Live Temp &amp; Route Telemetry</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+          SafeTemp™
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Step-by-step turn guidance for cargo bikes and volunteers with thermal integrity tracking, digital signatures, and one-tap drop-off validation.
+      </p>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">thermostat</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Crate #C-12 Internal Sensor</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary font-bold shadow-sm">3.8°C (Optimal)</span>
+</div>
+</div>
+</section>
+<!-- Community Testimonial & Trust Marquee -->
+<section class="px-gutter pb-space-lg">
+<div class="p-space-md rounded-xl bg-primary text-on-primary shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center gap-2">
+<div class="flex text-tertiary-fixed">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-primary/80 font-bold uppercase tracking-wider">Kitchen Director Review</span>
+</div>
+<blockquote class="font-title-sm text-title-sm font-semibold italic text-on-primary">
+        “SmartPlate trimmed our hotel banqueting waste liability by 82% in just sixty days. Surplus food is picked up within 20 minutes hot and intact.”
+      </blockquote>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-bold text-label-md">
+          MR
+        </div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-primary">Chef Marcus Rivera</p>
+<p class="font-label-sm text-label-sm text-on-primary/75">Culinary Director, Grand Metro Hotel &amp; Suites</p>
+</div>
+</div>
+</div>
+<!-- Final CTA Banner -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-high text-on-surface flex flex-col items-center text-center gap-space-xs">
+<span class="material-symbols-outlined text-[28px] text-primary">volunteer_activism</span>
+<h3 class="font-title-md text-title-md font-bold">Ready to End Food Waste in Your City?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+        Connect your facility in 5 minutes with zero hardware installation required.
+      </p>
+<div class="w-full flex flex-col gap-2 mt-2">
+<a class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-title-sm text-title-sm font-bold text-center active:scale-95 transition-transform shadow-sm" data-path="donor-intake" href="#">
+          Get Started as a Partner
+        </a>
+<a class="w-full py-2.5 rounded-lg bg-surface-container-lowest text-primary font-title-sm text-title-sm font-bold text-center active:scale-95 transition-transform" data-path="live-food-rescue-feed" href="#">
+          View Open Rescue Feed
+        </a>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple interactive tab toggle for today's surplus reduction analytics
+  const tabToday = document.getElementById('tab-today');
+  const tabWeek = document.getElementById('tab-week');
+  const tabCat = document.getElementById('tab-category');
+  const totalPill = document.getElementById('chart-total-pill');
+  const chartBars = document.getElementById('chart-bars');
+
+  function resetTabs() {
+    [tabToday, tabWeek, tabCat].forEach(tab => {
+      tab.className = "flex-1 py-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm font-semibold transition-all text-center hover:text-on-surface";
+    });
+  }
+
+  function setActiveTab(activeBtn) {
+    resetTabs();
+    activeBtn.className = "flex-1 py-1 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-sm transition-all text-center";
+  }
+
+  tabToday?.addEventListener('click', () => {
+    setActiveTab(tabToday);
+    totalPill.textContent = "418 kg Total";
+    chartBars.innerHTML = `
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">42k</span>
+        <div class="w-full rounded-t-lg bg-secondary-container h-[35%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">08:00</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">86k</span>
+        <div class="w-full rounded-t-lg bg-secondary-container h-[60%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">11:00</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-primary font-bold">145k</span>
+        <div class="w-full rounded-t-lg bg-primary h-[95%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm font-bold text-primary">14:00</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">68k</span>
+        <div class="w-full rounded-t-lg bg-secondary-container h-[48%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">17:00</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">77k</span>
+        <div class="w-full rounded-t-lg bg-secondary-container h-[55%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">20:00</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-tertiary font-bold">~50k</span>
+        <div class="w-full rounded-t-lg bg-tertiary-fixed h-[40%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-tertiary font-semibold">22:00</span>
+      </div>
+    `;
+  });
+
+  tabWeek?.addEventListener('click', () => {
+    setActiveTab(tabWeek);
+    totalPill.textContent = "2,450 kg Week";
+    chartBars.innerHTML = `
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">320</span>
+        <div class="w-full rounded-t-lg bg-secondary-container h-[65%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Mon</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">290</span>
+        <div class="w-full rounded-t-lg bg-secondary-container h-[58%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Tue</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">410</span>
+        <div class="w-full rounded-t-lg bg-secondary-container h-[82%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Wed</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">380</span>
+        <div class="w-full rounded-t-lg bg-secondary-container h-[76%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Thu</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-primary font-bold">510</span>
+        <div class="w-full rounded-t-lg bg-primary h-[98%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm font-bold text-primary">Fri</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">540</span>
+        <div class="w-full rounded-t-lg bg-secondary-container h-[92%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Sat</span>
+      </div>
+    `;
+  });
+
+  tabCat?.addEventListener('click', () => {
+    setActiveTab(tabCat);
+    totalPill.textContent = "Categorized";
+    chartBars.innerHTML = `
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">180</span>
+        <div class="w-full rounded-t-lg bg-primary h-[90%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Cooked</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">120</span>
+        <div class="w-full rounded-t-lg bg-secondary-container h-[60%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Bakery</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">75</span>
+        <div class="w-full rounded-t-lg bg-secondary-container h-[42%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Produce</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">35</span>
+        <div class="w-full rounded-t-lg bg-secondary-container h-[22%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Dairy</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">8</span>
+        <div class="w-full rounded-t-lg bg-secondary-container h-[12%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Drinks</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 group">
+        <span class="font-label-sm text-label-sm text-outline">~</span>
+        <div class="w-full rounded-t-lg bg-surface-container-high h-[10%] transition-all duration-300"></div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Other</span>
+      </div>
+    `;
+  });
+</script></main><nav class="fixed bottom-0 w-full z-40 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="live-food-rescue-feed" href="#"><span class="material-symbols-outlined text-[22px]">radar</span><span class="font-label-sm text-label-sm">Feed</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="donor-intake" href="#"><span class="material-symbols-outlined text-[22px]">add_box</span><span class="font-label-sm text-label-sm">Donation</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="volunteer-routing" href="#"><span class="material-symbols-outlined text-[22px]">route</span><span class="font-label-sm text-label-sm">Missions</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="impact-metrics" href="#"><span class="material-symbols-outlined text-[22px]">spa</span><span class="font-label-sm text-label-sm">Impact</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="profile-settings" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav><script>const toggle=document.getElementById('drawer-toggle');const closeBtn=document.getElementById('drawer-close');const drawer=document.getElementById('nav-drawer');const scrim=document.getElementById('drawer-scrim');function openDrawer(){drawer.classList.add('open');scrim.classList.add('open');}function closeDrawer(){drawer.classList.remove('open');scrim.classList.remove('open');}toggle?.addEventListener('click',openDrawer);closeBtn?.addEventListener('click',closeDrawer);scrim?.addEventListener('click',closeDrawer);</script></body></html>

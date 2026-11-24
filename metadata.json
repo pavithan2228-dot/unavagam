@@ -1,0 +1,11 @@
+{
+  "name": "Unavagam ",
+  "description": "AI-powered food management, demand forecasting, surplus confirmation, NGO matching, and volunteer delivery redistribution platform.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
