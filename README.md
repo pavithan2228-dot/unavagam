@@ -17,12 +17,12 @@ View your app in AI Studio: https://ai.studio/apps/6a53ed27-9306-4b47-b52a-34c5d
    `3000,24678 | ForEach-Object { Get-NetTCPConnection -LocalPort $_ -ErrorAction SilentlyContinue | Where-Object { $_.OwningProcess -gt 4 } | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue } }
 Remove-Item -Recurse -Force "node_modules\.vite" -ErrorAction SilentlyContinuel`
 
-2. Install packages inside this inner folder
-Powershell
+2. Install packages inside this inner folder:
+'Powershell'
     'npm install --legacy-peer-deps'
-Powershell
+'Powershell'
     'npm install @supabase/supabase-js ws --legacy-peer-deps'
-Powershell
+'Powershell'
     'npm install @rolldown/binding-win32-x64-msvc --no-save --legacy-peer-deps'
 
 3. Run the app:
