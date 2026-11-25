@@ -19,11 +19,11 @@ Remove-Item -Recurse -Force "node_modules\.vite" -ErrorAction SilentlyContinuel`
 
 2. Install packages inside this inner folder:<br>
 'Powershell'<br>
-    'npm install --legacy-peer-deps'
-'Powershell'
-    'npm install @supabase/supabase-js ws --legacy-peer-deps'
-'Powershell'
-    'npm install @rolldown/binding-win32-x64-msvc --no-save --legacy-peer-deps'
+    'npm install --legacy-peer-deps'<br>
+'Powershell'<br>
+    'npm install @supabase/supabase-js ws --legacy-peer-deps'<br>
+'Powershell'<br>
+    'npm install @rolldown/binding-win32-x64-msvc --no-save --legacy-peer-deps'<br>
 
 3. Run the app:
    `npm run dev`
