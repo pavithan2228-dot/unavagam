@@ -16,18 +16,18 @@ our web page link : https://unavagam-pe7t.onrender.com/
 
 **Prerequisites:**  Node.js
 
-
+      important think(in terminal):"cd unavagam-main"        
 1. Install dependencies:
    `3000,24678 | ForEach-Object { Get-NetTCPConnection -LocalPort $_ -ErrorAction SilentlyContinue | Where-Object { $_.OwningProcess -gt 4 } | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue } }
 Remove-Item -Recurse -Force "node_modules\.vite" -ErrorAction SilentlyContinuel`
 
 2. Install packages inside this inner folder:<br>
 'Powershell'<br>
-    'npm install --legacy-peer-deps'<br>
+        'npm install --legacy-peer-deps'<br>
 'Powershell'<br>
-    'npm install @supabase/supabase-js ws --legacy-peer-deps'<br>
+        'npm install @supabase/supabase-js ws --legacy-peer-deps'<br>
 'Powershell'<br>
-    'npm install @rolldown/binding-win32-x64-msvc --no-save --legacy-peer-deps'<br>
+        'npm install @rolldown/binding-win32-x64-msvc --no-save --legacy-peer-deps'<br>
 
 3. Run the app:
    `npm run dev`
